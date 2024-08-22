@@ -15,6 +15,7 @@ func postHandler(w http.ResponseWriter, r *http.Request) {
 
 	body, err := io.ReadAll(r.Body)
 	if err != nil {
+		
 		fmt.Println("Error reading the request body:", err)
 		http.Error(w, "Can't read the request body", http.StatusBadRequest)
 		return
