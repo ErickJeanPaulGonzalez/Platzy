@@ -11,6 +11,7 @@ func postHandler(w http.ResponseWriter, r *http.Request ){
 
 	defer r.Body.Close()
 
+	
 	body, err := io.ReadAll(r.Body)
 	if err != nil{
 		fmt.Println("error reading the request")
